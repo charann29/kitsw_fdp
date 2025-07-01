@@ -95,6 +95,12 @@
       el.style.backgroundColor = "purple";
       el.style.padding = "10px";
       el.style.borderRadius = "8px";
+function styleAll1() {
+      let el = document.getElementById("multiStyle");
+      el.style.color = "white";
+      el.style.backgroundColor = "purple";
+      el.style.padding = "10px";
+      el.style.borderRadius = "8px";
     }
   </script>
 
