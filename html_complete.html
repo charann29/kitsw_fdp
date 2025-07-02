@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<!-- DOCTYPE declaration - tells browser this is HTML5 -->
+<html lang="en">
+<!-- HTML root element - lang attribute specifies language for accessibility -->
+
+<head>
+    <!-- HEAD section - contains metadata, not visible to users -->
+    
+    <!-- Meta tags - provide information about the document -->
+    <meta charset="UTF-8">
+    <!-- Character encoding - UTF-8 supports all characters -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Viewport meta tag - essential for responsive design -->
+    
+    <meta name="description" content="Complete HTML tags reference with examples and explanations">
+    <!-- Description for search engines -->
+    
+    <meta name="keywords" content="HTML, tags, reference, web development">
+    <!-- Keywords for SEO (less important nowadays) -->
+    
+    <meta name="author" content="Web Developer">
+    <!-- Author information -->
+    
+    <meta name="robots" content="index, follow">
+    <!-- Instructions for search engine crawlers -->
+    
+    <!-- Open Graph meta tags for social media sharing -->
+    <meta property="og:title" content="HTML Tags Reference">
+    <meta property="og:description" content="Complete guide to HTML tags">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    
+    <!-- Title - appears in browser tab and search results -->
+    <title>Complete HTML Tags Reference - All Common Tags Explained</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Link to external fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Internal CSS styles -->
+    <style>
+        /* Internal CSS - styles specific to this document */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .highlight {
+            background-color: yellow;
+            padding: 2px 4px;
+        }
+        
+        .example-box {
+            border: 2px solid #ddd;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        .form-section {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .media-section {
+            background-color: #f0fff0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BODY section - contains all visible content -->
+    
+    <div class="container">
+        <!-- DIV - generic container for grouping and styling -->
+        
+        <!-- HEADER - represents introductory content or navigation -->
+        <header>
+            <h1>Complete HTML Tags Reference</h1>
+            <!-- H1 - main heading, most important heading on page -->
+            
+            <nav>
+                <!-- NAV - contains navigation links -->
+                <ul>
+                    <!-- UL - unordered list -->
+                    <li><a href="#text-tags">Text Tags</a></li>
+                    <!-- LI - list item, A - anchor/link -->
+                    <li><a href="#structure-tags">Structure Tags</a></li>
+                    <li><a href="#form-tags">Form Tags</a></li>
+                    <li><a href="#media-tags">Media Tags</a></li>
+                    <li><a href="#table-tags">Table Tags</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN - main content area of document -->
+        <main>
+            
+            <!-- SECTION - thematic grouping of content -->
+            <section id="text-tags">
+                <!-- ID attribute - unique identifier for element -->
+                
+                <h2>Text and Content Tags</h2>
+                <!-- H2 - second level heading -->
+                
+                <article>
+                    <!-- ARTICLE - self-contained content that could be distributed independently -->
+                    
+                    <h3>Headings (H1-H6)</h3>
+                    <!-- H3 - third level heading -->
+                    
+                    <h1>Heading 1 - Main title</h1>
+                    <h2>Heading 2 - Major section</h2>
+                    <h3>Heading 3 - Subsection</h3>
+                    <h4>Heading 4 - Sub-subsection</h4>
+                    <!-- H4 - fourth level heading -->
+                    <h5>Heading 5 - Minor heading</h5>
+                    <!-- H5 - fifth level heading -->
+                    <h6>Heading 6 - Smallest heading</h6>
+                    <!-- H6 - sixth level heading -->
+                </article>
+
+                <article>
+                    <h3>Paragraph and Text Formatting</h3>
+                    
+                    <p>
+                        <!-- P - paragraph, most common text container -->
+                        This is a regular paragraph with various text formatting options:
+                        <strong>strong text (important)</strong>,
+                        <!-- STRONG - important text, usually bold -->
+                        <b>bold text (stylistic)</b>,
+                        <!-- B - bold text for stylistic purposes -->
+                        <em>emphasized text (stressed)</em>,
+                        <!-- EM - emphasized text, usually italic -->
+                        <i>italic text (stylistic)</i>,
+                        <!-- I - italic text for stylistic purposes -->
+                        <u>underlined text</u>,
+                        <!-- U - underlined text -->
+                        <s>strikethrough text</s>,
+                        <!-- S - strikethrough text -->
+                        <mark class="highlight">highlighted text</mark>,
+                        <!-- MARK - highlighted text -->
+                        <small>smaller text</small>,
+                        <!-- SMALL - smaller text, fine print -->
+                        <sub>subscript</sub> and <sup>superscript</sup>.
+                        <!-- SUB - subscript, SUP - superscript -->
+                    </p>
+                    
+                    <p>
+                        You can also use <code>inline code</code> for programming terms,
+                        <!-- CODE - inline code or programming terms -->
+                        <kbd>keyboard input</kbd> for user input,
+                        <!-- KBD - keyboard input -->
+                        <samp>sample output</samp> for program output,
+                        <!-- SAMP - sample program output -->
+                        and <var>variables</var> in mathematical expressions.
+                        <!-- VAR - variables or placeholders -->
+                    </p>
+                    
+                    <pre>
+                        <!-- PRE - preformatted text, preserves whitespace and line breaks -->
+                        This is preformatted text.
+                        It preserves    spaces and
+                        line breaks exactly as written.
+                        Often used for code blocks.
+                    </pre>
+                    
+                    <blockquote cite="https://example.com">
+                        <!-- BLOCKQUOTE - extended quotation, cite attribute for source -->
+                        This is a blockquote used for longer quotations.
+                        It's typically indented and styled differently.
+                    </blockquote>
+                    
+                    <p>
+                        Short quotes can use <q>inline quote tags</q> instead.
+                        <!-- Q - short inline quotation -->
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Lists</h3>
+                    
+                    <h4>Unordered List (Bulleted)</h4>
+                    <ul>
+                        <!-- UL - unordered list, creates bulleted list -->
+                        <li>First item</li>
+                        <!-- LI - list item -->
+                        <li>Second item</li>
+                        <li>Third item with nested list:
+                            <ul>
+                                <li>Nested item 1</li>
+                                <li>Nested item 2</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <h4>Ordered List (Numbered)</h4>
+                    <ol>
+                        <!-- OL - ordered list, creates numbered list -->
+                        <li>First step</li>
+                        <li>Second step</li>
+                        <li>Third step</li>
+                    </ol>
+                    
+                    <ol type="A" start="5">
+                        <!-- Type attribute: A, a, I, i, 1 (default) -->
+                        <!-- Start attribute: starting number -->
+                        <li>Item E</li>
+                        <li>Item F</li>
+                        <li>Item G</li>
+                    </ol>
+                    
+                    <h4>Description List</h4>
+                    <dl>
+                        <!-- DL - description list -->
+                        <dt>HTML</dt>
+                        <!-- DT - description term -->
+                        <dd>HyperText Markup Language</dd>
+                        <!-- DD - description definition -->
+                        <dt>CSS</dt>
+                        <dd>Cascading Style Sheets</dd>
+                        <dt>JavaScript</dt>
+                        <dd>Programming language for web interactivity</dd>
+                    </dl>
+                </article>
+
+                <article>
+                    <h3>Links and Navigation</h3>
+                    
+                    <p>Different types of links:</p>
+                    <ul>
+                        <li><a href="https://example.com" target="_blank" rel="noopener">External link</a></li>
+                        <!-- A - anchor/link, href = destination, target="_blank" opens in new tab -->
+                        <!-- rel="noopener" for security when using target="_blank" -->
+                        
+                        <li><a href="#text-tags">Internal link to section</a></li>
+                        <!-- Link to element with id="text-tags" -->
+                        
+                        <li><a href="mailto:email@example.com">Email link</a></li>
+                        <!-- Opens default email client -->
+                        
+                        <li><a href="tel:+1234567890">Phone link</a></li>
+                        <!-- Opens phone dialer on mobile -->
+                        
+                        <li><a href="file.pdf" download="document.pdf">Download link</a></li>
+                        <!-- Download attribute forces download -->
+                    </ul>
+                </article>
+            </section>
+
+            <section id="structure-tags">
+                <h2>Structure and Layout Tags</h2>
+                
+                <article>
+                    <h3>Semantic HTML5 Elements</h3>
+                    
+                    <div class="example-box">
+                        <header>
+                            <!-- HEADER - introductory content -->
+                            <h4>Article Header</h4>
+                            <p>Published on <time datetime="2025-01-01">January 1, 2025</time></p>
+                            <!-- TIME - represents date/time, datetime attribute for machine-readable format -->
+                        </header>
+                        
+                        <main>
+                            <!-- MAIN - main content area -->
+                            <p>This is the main content of the article.</p>
+                        </main>
+                        
+                        <aside>
+                            <!-- ASIDE - sidebar content, related but not essential -->
+                            <h5>Related Information</h5>
+                            <p>This is sidebar content.</p>
+                        </aside>
+                        
+                        <footer>
+                            <!-- FOOTER - footer information -->
+                            <p>Article footer information</p>
+                        </footer>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Generic Containers</h3>
+                    
+                    <div>
+                        <!-- DIV - generic block container -->
+                        <p>DIV is a block-level container used for grouping elements.</p>
+                        
+                        <span>SPAN is an inline container</span>
+                        <!-- SPAN - generic inline container -->
+                        <span> used for styling parts of text or inline elements.</span>
+                    </div>
+                </article>
+
+                <article>
+                    <h3>Line Breaks and Horizontal Rules</h3>
+                    
+                    <p>
+                        This line has a break<br>here using the BR tag.
+                        <!-- BR - line break, self-closing -->
+                        Another line<br>
+                        And another line.
+                    </p>
+                    
+                    <hr>
+                    <!-- HR - horizontal rule/line, self-closing -->
+                    
+                    <p>Content after the horizontal rule.</p>
+                </article>
+            </section>
+
+            <section id="form-tags" class="form-section">
+                <h2>Form Tags</h2>
+                
+                <form action="/submit" method="POST" enctype="multipart/form-data">
+                    <!-- FORM - container for form elements -->
+                    <!-- action = where to submit, method = GET/POST, enctype for file uploads -->
+                    
+                    <fieldset>
+                        <!-- FIELDSET - groups related form elements -->
+                        <legend>Personal Information</legend>
+                        <!-- LEGEND - caption for fieldset -->
+                        
+                        <div>
+                            <label for="name">Full Name:</label>
+                            <!-- LABEL - label for form controls, for attribute links to input id -->
+                            <input type="text" id="name" name="name" required placeholder="Enter your name">
+                            <!-- INPUT - various input types, required = mandatory field -->
+                        </div>
+                        
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <!-- type="email" provides email validation -->
+                        </div>
+                        
+                        <div>
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" minlength="8">
+                            <!-- type="password" hides input, minlength for validation -->
+                        </div>
+                        
+                        <div>
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" min="18" max="100" step="1">
+                            <!-- type="number" with min, max, step attributes -->
+                        </div>
+                        
+                        <div>
+                            <label for="birthdate">Birth Date:</label>
+                            <input type="date" id="birthdate" name="birthdate">
+                            <!-- type="date" shows date picker -->
+                        </div>
+                        
+                        <div>
+                            <label for="website">Website:</label>
+                            <input type="url" id="website" name="website">
+                            <!-- type="url" for URL validation -->
+                        </div>
+                        
+                        <div>
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone">
+                            <!-- type="tel" for telephone numbers -->
+                        </div>
+                        
+                        <div>
+                            <label for="search">Search:</label>
+                            <input type="search" id="search" name="search">
+                            <!-- type="search" for search inputs -->
+                        </div>
+                        
+                        <div>
+                            <label for="color">Favorite Color:</label>
+                            <input type="color" id="color" name="color" value="#ff0000">
+                            <!-- type="color" shows color picker -->
+                        </div>
+                        
+                        <div>
+                            <label for="range">Volume:</label>
+                            <input type="range" id="range" name="range" min="0" max="100" value="50">
+                            <!-- type="range" creates slider -->
+                        </div>
+                        
+                        <div>
+                            <label for="file">Upload File:</label>
+                            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx" multiple>
+                            <!-- type="file" for file uploads, accept limits file types, multiple allows multiple files -->
+                        </div>
+                        
+                        <div>
+                            <input type="hidden" name="form_id" value="contact_form">
+                            <!-- type="hidden" for data not shown to user -->
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset>
+                        <legend>Preferences</legend>
+                        
+                        <div>
+                            <label for="bio">Bio:</label>
+                            <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself..."></textarea>
+                            <!-- TEXTAREA - multi-line text input -->
+                        </div>
+                        
+                        <div>
+                            <label for="country">Country:</label>
+                            <select id="country" name="country">
+                                <!-- SELECT - dropdown menu -->
+                                <option value="">Choose a country</option>
+                                <!-- OPTION - choices in select -->
+                                <option value="us">United States</option>
+                                <option value="uk" selected>United Kingdom</option>
+                                <!-- selected attribute makes this the default -->
+                                <option value="ca">Canada</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="skills">Skills (multiple):</label>
+                            <select id="skills" name="skills" multiple size="4">
+                                <!-- multiple allows multiple selections -->
+                                <optgroup label="Frontend">
+                                    <!-- OPTGROUP - groups related options -->
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="js">JavaScript</option>
+                                </optgroup>
+                                <optgroup label="Backend">
+                                    <option value="python">Python</option>
+                                    <option value="java">Java</option>
+                                    <option value="php">PHP</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <p>Gender:</p>
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <!-- type="radio" - only one can be selected per name group -->
+                            
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label>
+                            
+                            <input type="radio" id="other" name="gender" value="other" checked>
+                            <label for="other">Other</label>
+                            <!-- checked attribute makes this selected by default -->
+                        </div>
+                        
+                        <div>
+                            <p>Interests:</p>
+                            <input type="checkbox" id="sports" name="interests" value="sports">
+                            <label for="sports">Sports</label>
+                            <!-- type="checkbox" - multiple can be selected -->
+                            
+                            <input type="checkbox" id="music" name="interests" value="music" checked>
+                            <label for="music">Music</label>
+                            
+                            <input type="checkbox" id="travel" name="interests" value="travel">
+                            <label for="travel">Travel</label>
+                        </div>
+                    </fieldset>
+                    
+                    <div>
+                        <button type="submit">Submit Form</button>
+                        <!-- BUTTON - clickable button, type="submit" submits form -->
+                        
+                        <button type="reset">Reset Form</button>
+                        <!-- type="reset" clears form -->
+                        
+                        <button type="button" onclick="alert('Hello!')">Custom Action</button>
+                        <!-- type="button" for custom JavaScript actions -->
+                        
+                        <input type="submit" value="Submit (Input)">
+                        <!-- Alternative submit button using input -->
+                        
+                        <input type="reset" value="Reset (Input)">
+                        <!-- Alternative reset button using input -->
+                        
+                        <input type="button" value="Button (Input)" onclick="alert('Input button!')">
+                        <!-- Alternative button using input -->
+                    </div>
+                </form>
+            </section>
+
+            <section id="media-tags" class="media-section">
+                <h2>Media Tags</h2>
+                
+                <article>
+                    <h3>Images</h3>
+                    
+                    <img src="https://via.placeholder.com/300x200" alt="Placeholder image" width="300" height="200">
+                    <!-- IMG - image, src = source, alt = alternative text for accessibility -->
+                    <!-- width, height attributes for dimensions -->
+                    
+                    <figure>
+                        <!-- FIGURE - self-contained content like images, diagrams -->
+                        <img src="https://via.placeholder.com/400x300" alt="Another placeholder" loading="lazy">
+                        <!-- loading="lazy" for performance optimization -->
+                        <figcaption>This is a caption for the image above.</figcaption>
+                        <!-- FIGCAPTION - caption for figure -->
+                    </figure>
+                    
+                    <picture>
+                        <!-- PICTURE - responsive images -->
+                        <source media="(min-width: 800px)" srcset="https://via.placeholder.com/800x400">
+                        <source media="(min-width: 400px)" srcset="https://via.placeholder.com/400x200">
+                        <img src="https://via.placeholder.com/300x150" alt="Responsive image">
+                        <!-- Fallback img for older browsers -->
+                    </picture>
+                </article>
+
+                <article>
+                    <h3>Audio</h3>
+                    
+                    <audio controls preload="metadata">
+                        <!-- AUDIO - audio player, controls shows player controls -->
+                        <!-- preload: none, metadata, auto -->
+                        <source src="audio.mp3" type="audio/mpeg">
+                        <source src="audio.ogg" type="audio/ogg">
+                        <!-- SOURCE - different formats for browser compatibility -->
+                        Your browser does not support the audio element.
+                        <!-- Fallback text for unsupported browsers -->
+                    </audio>
+                </article>
+
+                <article>
+                    <h3>Video</h3>
+                    
+                    <video controls width="400" height="300" poster="https://via.placeholder.com/400x300">
+                        <!-- VIDEO - video player, poster = thumbnail image -->
+                        <source src="video.mp4" type="video/mp4">
+                        <source src="video.webm" type="video/webm">
+                        <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+                        <!-- TRACK - subtitles, captions, descriptions -->
+                        Your browser does not support the video element.
+                    </video>
+                </article>
+
+                <article>
+                    <h3>Embedded Content</h3>
+                    
+                    <iframe src="https://www.example.com" width="500" height="300" title="Example website">
+                        <!-- IFRAME - embeds another HTML document -->
+                        <!-- title attribute for accessibility -->
+                        Your browser does not support iframes.
+                    </iframe>
+                    
+                    <embed src="document.pdf" type="application/pdf" width="500" height="400">
+                    <!-- EMBED - embeds external content like PDFs -->
+                    
+                    <object data="flash-content.swf" type="application/x-shockwave-flash" width="400" height="300">
+                        <!-- OBJECT - embeds external resources -->
+                        <param name="quality" value="high">
+                        <!-- PARAM - parameters for object -->
+                        Alternative content for browsers that don't support this object.
+                    </object>
+                </article>
+            </section>
+
+            <section id="table-tags">
+                <h2>Table Tags</h2>
+                
+                <table>
+                    <!-- TABLE - table container -->
+                    <caption>Employee Information</caption>
+                    <!-- CAPTION - table title/description -->
+                    
+                    <colgroup>
+                        <!-- COLGROUP - groups columns for styling -->
+                        <col span="2" style="background-color: #f0f0f0;">
+                        <!-- COL - individual column, span = number of columns -->
+                        <col style="background-color: #e0e0e0;">
+                    </colgroup>
+                    
+                    <thead>
+                        <!-- THEAD - table header section -->
+                        <tr>
+                            <!-- TR - table row -->
+                            <th scope="col">Name</th>
+                            <!-- TH - table header cell, scope for accessibility -->
+                            <th scope="col">Position</th>
+                            <th scope="col">Salary</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <!-- TBODY - table body section -->
+                        <tr>
+                            <td>John Doe</td>
+                            <!-- TD - table data cell -->
+                            <td>Developer</td>
+                            <td>$75,000</td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>Designer</td>
+                            <td>$65,000</td>
+                        </tr>
+                        <tr>
+                            <td>Bob Johnson</td>
+                            <td>Manager</td>
+                            <td rowspan="2">$85,000</td>
+                            <!-- rowspan - cell spans multiple rows -->
+                        </tr>
+                        <tr>
+                            <td colspan="2">Team Lead</td>
+                            <!-- colspan - cell spans multiple columns -->
+                        </tr>
+                    </tbody>
+                    
+                    <tfoot>
+                        <!-- TFOOT - table footer section -->
+                        <tr>
+                            <th scope="row">Total</th>
+                            <td colspan="2">4 Employees</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+
+            <section>
+                <h2>Interactive and Scripting Tags</h2>
+                
+                <article>
+                    <h3>Interactive Elements</h3>
+                    
+                    <details>
+                        <!-- DETAILS - creates collapsible content -->
+                        <summary>Click to expand</summary>
+                        <!-- SUMMARY - visible heading for details -->
+                        <p>This content is hidden by default and can be toggled.</p>
+                        <p>Very useful for FAQ sections or additional information.</p>
+                    </details>
+                    
+                    <dialog id="myDialog">
+                        <!-- DIALOG - modal dialog box -->
+                        <p>This is a dialog box.</p>
+                        <button onclick="document.getElementById('myDialog').close()">Close</button>
+                    </dialog>
+                    <button onclick="document.getElementById('myDialog').showModal()">Open Dialog</button>
+                    
+                    <progress value="70" max="100">70%</progress>
+                    <!-- PROGRESS - progress bar -->
+                    
+                    <meter value="6" min="0" max="10">6 out of 10</meter>
+                    <!-- METER - scalar measurement within known range -->
+                </article>
+
+                <article>
+                    <h3>Scripting</h3>
+                    
+                    <script>
+                        // SCRIPT - contains JavaScript code
+                        console.log("This JavaScript runs when the page loads");
+                        
+                        function showAlert() {
+                            alert("Button clicked!");
+                        }
+                    </script>
+                    
+                    <noscript>
+                        <!-- NOSCRIPT - content shown when JavaScript is disabled -->
+                        <p>This website requires JavaScript to function properly.</p>
+                    </noscript>
+                    
+                    <button onclick="showAlert()">Click for Alert</button>
+                </article>
+            </section>
+
+            <section>
+                <h2>Less Common but Useful Tags</h2>
+                
+                <article>
+                    <h3>Data and Technical</h3>
+                    
+                    <p>
+                        The <data value="398">iPhone 15</data> costs $799.
+                        <!-- DATA - links content with machine-readable value -->
+                    </p>
+                    
+                    <p>
+                        Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy.
+                        <!-- KBD - keyboard input -->
+                    </p>
+                    
+                    <p>
+                        The output was: <samp>Hello, World!</samp>
+                        <!-- SAMP - sample output -->
+                    </p>
+                    
+                    <p>
+                        The variable <var>x</var> equals 5.
+                        <!-- VAR - variable -->
+                    </p>
+                    
+                    <p>
+                        Use the <code>console.log()</code> function.
+                        <!-- CODE - code snippet -->
+                    </p>
+                    
+                    <p>
+                        <abbr title="World Wide Web">WWW</abbr> was invented by Tim Berners-Lee.
+                        <!-- ABBR - abbreviation, title shows full form -->
+                    </p>
+                    
+                    <p>
+                        <dfn>HTML</dfn> is the standard markup language for web pages.
+                        <!-- DFN - definition term -->
+                    </p>
+                    
+                    <address>
+                        <!-- ADDRESS - contact information -->
+                        Contact: <a href="mailto:info@example.com">info@example.com</a><br>
+                        Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </address>
+                </article>
+
+                <article>
+                    <h3>Editing and Versioning</h3>
+                    
+                    <p>
+                        This text has been <ins datetime="2025-01-01T10:00:00Z">inserted</ins> 
+                        <!-- INS - inserted text -->
+                        and this has been <del datetime="2025-01-01T10:00:00Z">deleted</del>.
+                        <!-- DEL - deleted text -->
+                    </p>
+                </article>
+
+                <article>
+                    <h3>Ruby Annotations (for East Asian typography)</h3>
+                    
+                    <ruby>
+                        <!-- RUBY - ruby annotations -->
+                        漢字
+                        <rp>(</rp><rt>かんじ</rt><rp>)</rp>
+                        <!-- RT - ruby text (pronunciation), RP - ruby parentheses (fallback) -->
+                    </ruby>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <h2>Document Footer</h2>
+            <p>This document demonstrates most commonly used HTML tags with explanations.</p>
+            <p>&copy; 2025 HTML Reference Guide</p>
+            <!-- &copy; is an HTML entity for copyright symbol -->
+        </footer>
+    </div>
+
+    <!-- JavaScript at end of body for better performance -->
+    <script>
+        // Additional JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Document loaded and all HTML tags demonstrated!');
+        });
+    </script>
+</body>
+</html>
