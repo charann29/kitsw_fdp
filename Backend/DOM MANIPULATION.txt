@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Style Manipulation Examples</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .section {
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 20px;
+    }
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      margin-top: 10px;
+    }
+    #hoverText {
+      transition: color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DOM Style Manipulation Examples</h1>
+
+  <!-- Example 1 -->
+  <div class="section">
+    <h2 id="heading">Hello!</h2>
+    <button onclick="changeColor()">Change Background</button>
+  </div>
+
+  <!-- Example 2 -->
+  <div class="section">
+    <p id="para">This is a paragraph.</p>
+    <button onclick="increaseFont()">Increase Font Size</button>
+  </div>
+
+  <!-- Example 3 -->
+  <div class="section">
+    <p id="hoverText" onmouseover="highlight()" onmouseout="normal()">Hover over me!</p>
+  </div>
+
+  <!-- Example 4 -->
+  <div class="section">
+    <div id="box"></div>
+    <button onclick="toggleBox()">Toggle Visibility</button>
+  </div>
+
+  <!-- Example 5 -->
+  <div class="section">
+    <h2 id="title">Add a border to this text</h2>
+    <button onclick="addBorder()">Add Border</button>
+  </div>
+
+  <!-- Example 6 -->
+  <div class="section">
+    <p id="multiStyle">Watch my style change!</p>
+    <button onclick="styleAll()">Apply All Styles</button>
+  </div>
+
+  <script>
+    function changeColor() {
+      document.body.style.backgroundColor = "lightblue";
+    }
+
+    function increaseFont() {
+      document.getElementById("para").style.fontSize = "24px";
+    }
+
+    function highlight() {
+      document.getElementById("hoverText").style.color = "red";
+    }
+
+    function normal() {
+      document.getElementById("hoverText").style.color = "black";
+    }
+
+    function toggleBox() {
+      let box = document.getElementById("box");
+      box.style.display = box.style.display === "none" ? "block" : "none";
+    }
+
+    function addBorder() {
+      document.getElementById("title").style.border = "2px solid blue";
+    }
+
+    function styleAll() {
+      let el = document.getElementById("multiStyle");
+      el.style.color = "white";
+      el.style.backgroundColor = "purple";
+      el.style.padding = "10px";
+      el.style.borderRadius = "8px";
+    }
+  </script>
+
+</body>
+</html>
