@@ -1,0 +1,13 @@
+/* App.css */
+.app {
+  display: flex;
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  flex: 1;
+  padding: 10px;
+  background-color: #f9f9f9;
+  height: 100vh;
+  overflow-y: auto;
+}
