@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        
+        .section-title {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+        
+        .example {
+            margin: 15px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fafafa;
+        }
+        
+        .code {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        /* Layout Examples */
+        .display-block { display: block; background: lightblue; padding: 10px; margin: 5px 0; }
+        .display-inline { display: inline; background: lightgreen; padding: 5px; margin: 5px; }
+        .display-inline-block { display: inline-block; background: lightcoral; padding: 10px; margin: 5px; width: 100px; }
+        .display-flex { display: flex; background: lightyellow; padding: 10px; gap: 10px; }
+        .display-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; background: lightpink; padding: 10px; }
+        
+        .position-relative { position: relative; background: lightgray; padding: 20px; }
+        .position-absolute { position: absolute; top: 10px; right: 10px; background: red; color: white; padding: 5px; }
+        .position-fixed { position: fixed; top: 10px; right: 10px; background: blue; color: white; padding: 5px; z-index: 1000; }
+        
+        /* Box Model Examples */
+        .box-model {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            padding: 15px;
+            border: 5px solid #333;
+            background: lightblue;
+            box-sizing: border-box;
+        }
+        
+        /* Flexbox Examples */
+        .flex-container {
+            display: flex;
+            background: #eee;
+            padding: 10px;
+            margin: 10px 0;
+            min-height: 100px;
+        }
+        .flex-center { justify-content: center; align-items: center; }
+        .flex-space-between { justify-content: space-between; align-items: center; }
+        .flex-column { flex-direction: column; }
+        .flex-item { background: lightblue; padding: 10px; margin: 5px; }
+        .flex-grow { flex-grow: 1; }
+        
+        /* Grid Examples */
+        .grid-container {
+            display: grid;
+            background: #eee;
+            padding: 10px;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .grid-3col { grid-template-columns: 1fr 1fr 1fr; }
+        .grid-areas {
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+        }
+        .grid-header { grid-area: header; background: lightcoral; padding: 10px; }
+        .grid-sidebar { grid-area: sidebar; background: lightgreen; padding: 10px; }
+        .grid-main { grid-area: main; background: lightblue; padding: 10px; }
+        .grid-footer { grid-area: footer; background: lightyellow; padding: 10px; }
+        
+        /* Typography Examples */
+        .font-examples {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .serif { font-family: serif; }
+        .sans-serif { font-family: sans-serif; }
+        .monospace { font-family: monospace; }
+        .large-text { font-size: 24px; }
+        .bold-text { font-weight: bold; }
+        .italic-text { font-style: italic; }
+        .underline-text { text-decoration: underline; }
+        .uppercase-text { text-transform: uppercase; }
+        .center-text { text-align: center; }
+        .justified-text { text-align: justify; }
+        .letter-spacing { letter-spacing: 3px; }
+        .line-height { line-height: 2; }
+        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* Background Examples */
+        .bg-color { background-color: lightblue; padding: 20px; margin: 10px 0; }
+        .bg-gradient {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            padding: 20px;
+            margin: 10px 0;
+            color: white;
+        }
+        .bg-radial {
+            background: radial-gradient(circle, #ff6b6b, #4ecdc4);
+            padding: 20px;
+            margin: 10px 0;
+            color: white;
+        }
+        
+        /* Border Examples */
+        .border-solid { border: 3px solid #333; padding: 10px; margin: 10px 0; }
+        .border-dashed { border: 3px dashed #ff6b6b; padding: 10px; margin: 10px 0; }
+        .border-dotted { border: 3px dotted #4ecdc4; padding: 10px; margin: 10px 0; }
+        .border-radius { border: 2px solid #333; border-radius: 15px; padding: 10px; margin: 10px 0; }
+        .border-radius-circle { border: 2px solid #333; border-radius: 50%; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 10px 0; }
+        
+        /* Shadow Examples */
+        .box-shadow {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            margin: 20px 0;
+            background: white;
+        }
+        .box-shadow-inset {
+            box-shadow: inset 0 4px 8px rgba(0,0,0,0.2);
+            padding: 20px;
+            margin: 20px 0;
+            background: lightgray;
+        }
+        
+        /* Transform Examples */
+        .transform-rotate { transform: rotate(15deg); background: lightblue; padding: 10px; margin: 20px; display: inline-block; }
+        .transform-scale { transform: scale(1.2); background: lightgreen; padding: 10px; margin: 20px; display: inline-block; }
+        .transform-translate { transform: translate(20px, 10px); background: lightcoral; padding: 10px; margin: 20px; display: inline-block; }
+        .transform-skew { transform: skew(20deg, 10deg); background: lightyellow; padding: 10px; margin: 20px; display: inline-block; }
+        
+        /* Animation Examples */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        .fade-in { animation: fadeIn 2s ease-in-out; }
+        .slide-in { animation: slideIn 1s ease-out; }
+        .bounce { animation: bounce 2s infinite; }
+        
+        /* Transition Examples */
+        .transition-all {
+            background: lightblue;
+            padding: 10px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .transition-all:hover {
+            background: darkblue;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        /* Overflow Examples */
+        .overflow-hidden {
+            width: 200px;
+            height: 50px;
+            overflow: hidden;
+            background: lightgray;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .overflow-scroll {
+            width: 200px;
+            height: 80px;
+            overflow: scroll;
+            background: lightgray;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        /* List Examples */
+        .list-none { list-style: none; }
+        .list-disc { list-style-type: disc; }
+        .list-decimal { list-style-type: decimal; }
+        .list-square { list-style-type: square; }
+        
+        /* Table Examples */
+        .example-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 10px 0;
+        }
+        .example-table th, .example-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .example-table th {
+            background-color: #f2f2f2;
+        }
+        
+        /* Cursor Examples */
+        .cursor-pointer { cursor: pointer; background: lightblue; padding: 10px; margin: 5px; display: inline-block; }
+        .cursor-help { cursor: help; background: lightgreen; padding: 10px; margin: 5px; display: inline-block; }
+        .cursor-wait { cursor: wait; background: lightcoral; padding: 10px; margin: 5px; display: inline-block; }
+        .cursor-not-allowed { cursor: not-allowed; background: lightgray; padding: 10px; margin: 5px; display: inline-block; }
+        
+        /* Pseudo-elements Examples */
+        .pseudo-before::before {
+            content: "→ ";
+            color: red;
+            font-weight: bold;
+        }
+        .pseudo-after::after {
+            content: " ←";
+            color: blue;
+            font-weight: bold;
+        }
+        
+        /* Media Query Example */
+        @media (max-width: 768px) {
+            .responsive-text {
+                font-size: 14px;
+                color: red;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .responsive-text {
+                font-size: 18px;
+                color: blue;
+            }
+        }
+        
+        /* Custom Properties (CSS Variables) */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #e74c3c;
+            --spacing: 20px;
+        }
+        
+        .css-variables {
+            color: var(--primary-color);
+            background: var(--secondary-color);
+            padding: var(--spacing);
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Properties Examples</h1>
+        
+        <!-- Layout Properties -->
+        <div class="section">
+            <h2 class="section-title">Layout Properties</h2>
+            
+            <div class="example">
+                <h3>Display Property</h3>
+                <div class="code">
+.display-block { display: block; }
+.display-inline { display: inline; }
+.display-inline-block { display: inline-block; }
+.display-flex { display: flex; }
+.display-grid { display: grid; }
+                </div>
+                <div class="display-block">Block Element</div>
+                <span class="display-inline">Inline</span>
+                <span class="display-inline">Elements</span>
+                <div class="display-inline-block">Inline Block 1</div>
+                <div class="display-inline-block">Inline Block 2</div>
+                <div class="display-flex">
+                    <div>Flex Item 1</div>
+                    <div>Flex Item 2</div>
+                    <div>Flex Item 3</div>
+                </div>
+                <div class="display-grid">
+                    <div>Grid Item 1</div>
+                    <div>Grid Item 2</div>
+                    <div>Grid Item 3</div>
+                </div>
+            </div>
+            
+            <div class="example">
+                <h3>Position Property</h3>
+                <div class="code">
+.position-relative { position: relative; }
+.position-absolute { position: absolute; top: 10px; right: 10px; }
+                </div>
+                <div class="position-relative">
+                    Relative positioned parent
+                    <div class="position-absolute">Absolute child</div>
+                </div>
+            </div>
+            
+            <div class="example">
+                <h3>Box Model</h3>
+                <div class="code">
+.box-model {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 15px;
+    border: 5px solid #333;
+    box-sizing: border-box;
+}
+                </div>
+                <div class="box-model">Box Model Example</div>
+            </div>
+        </div>
+        
+        <!-- Flexbox -->
+        <div class="section">
+            <h2 class="section-title">Flexbox</h2>
+            
+            <div class="example">
+                <h3>Flex Container Properties</h3>
+                <div class="code">
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.flex-space-between { display: flex; justify-content: space-between; }
+.flex-column { display: flex; flex-direction: column; }
+                </div>
+                <div class="flex-container flex-center">
+                    <div class="flex-item">Centered</div>
+                </div>
+                <div class="flex-container flex-space-between">
+                    <div class="flex-item">Start</div>
+                    <div class="flex-item">End</div>
+                </div>
+                <div class="flex-container flex-column">
+                    <div class="flex-item">Column 1</div>
+                    <div class="flex-item">Column 2</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Grid -->
+        <div class="section">
+            <h2 class="section-title">CSS Grid</h2>
+            
+            <div class="example">
+                <h3>Grid Layout</h3>
+                <div class="code">
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+                </div>
+                <div class="grid-container grid-3col">
+                    <div class="flex-item">Grid 1</div>
+                    <div class="flex-item">Grid 2</div>
+                    <div class="flex-item">Grid 3</div>
+                </div>
+            </div>
+            
+            <div class="example">
+                <h3>Grid Areas</h3>
+                <div class="code">
+.grid-areas {
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+                </div>
+                <div class="grid-container grid-areas">
+                    <div class="grid-header">Header</div>
+                    <div class="grid-sidebar">Sidebar</div>
+                    <div class="grid-main">Main Content</div>
+                    <div class="grid-footer">Footer</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Typography -->
+        <div class="section">
+            <h2 class="section-title">Typography</h2>
+            
+            <div class="example">
+                <h3>Font Properties</h3>
+                <div class="code">
+.serif { font-family: serif; }
+.sans-serif { font-family: sans-serif; }
+.monospace { font-family: monospace; }
+.large-text { font-size: 24px; }
+.bold-text { font-weight: bold; }
+.italic-text { font-style: italic; }
+                </div>
+                <div class="font-examples serif">Serif Font Family</div>
+                <div class="font-examples sans-serif">Sans-serif Font Family</div>
+                <div class="font-examples monospace">Monospace Font Family</div>
+                <div class="font-examples large-text">Large Text (24px)</div>
+                <div class="font-examples bold-text">Bold Text</div>
+                <div class="font-examples italic-text">Italic Text</div>
+            </div>
+            
+            <div class="example">
+                <h3>Text Properties</h3>
+                <div class="code">
+.underline-text { text-decoration: underline; }
+.uppercase-text { text-transform: uppercase; }
+.center-text { text-align: center; }
+.letter-spacing { letter-spacing: 3px; }
+.text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+                </div>
+                <div class="font-examples underline-text">Underlined Text</div>
+                <div class="font-examples uppercase-text">uppercase text</div>
+                <div class="font-examples center-text">Centered Text</div>
+                <div class="font-examples letter-spacing">Letter Spacing</div>
+                <div class="font-examples text-shadow">Text with Shadow</div>
+            </div>
+        </div>
+        
+        <!-- Backgrounds -->
+        <div class="section">
+            <h2 class="section-title">Backgrounds & Colors</h2>
+            
+            <div class="example">
+                <h3>Background Properties</h3>
+                <div class="code">
+.bg-color { background-color: lightblue; }
+.bg-gradient { background: linear-gradient(45deg, #ff6b6b, #4ecdc4); }
+.bg-radial { background: radial-gradient(circle, #ff6b6b, #4ecdc4); }
+                </div>
+                <div class="bg-color">Background Color</div>
+                <div class="bg-gradient">Linear Gradient Background</div>
+                <div class="bg-radial">Radial Gradient Background</div>
+            </div>
+        </div>
+        
+        <!-- Borders -->
+        <div class="section">
+            <h2 class="section-title">Borders & Outlines</h2>
+            
+            <div class="example">
+                <h3>Border Styles</h3>
+                <div class="code">
+.border-solid { border: 3px solid #333; }
+.border-dashed { border: 3px dashed #ff6b6b; }
+.border-dotted { border: 3px dotted #4ecdc4; }
+.border-radius { border-radius: 15px; }
+.border-radius-circle { border-radius: 50%; }
+                </div>
+                <div class="border-solid">Solid Border</div>
+                <div class="border-dashed">Dashed Border</div>
+                <div class="border-dotted">Dotted Border</div>
+                <div class="border-radius">Rounded Corners</div>
+                <div class="border-radius-circle">Circle</div>
+            </div>
+        </div>
+        
+        <!-- Shadows -->
+        <div class="section">
+            <h2 class="section-title">Shadows & Effects</h2>
+            
+            <div class="example">
+                <h3>Box Shadow</h3>
+                <div class="code">
+.box-shadow { box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+.box-shadow-inset { box-shadow: inset 0 4px 8px rgba(0,0,0,0.2); }
+                </div>
+                <div class="box-shadow">Drop Shadow</div>
+                <div class="box-shadow-inset">Inset Shadow</div>
+            </div>
+        </div>
+        
+        <!-- Transforms -->
+        <div class="section">
+            <h2 class="section-title">Transforms</h2>
+            
+            <div class="example">
+                <h3>Transform Functions</h3>
+                <div class="code">
+.transform-rotate { transform: rotate(15deg); }
+.transform-scale { transform: scale(1.2); }
+.transform-translate { transform: translate(20px, 10px); }
+.transform-skew { transform: skew(20deg, 10deg); }
+                </div>
+                <div class="transform-rotate">Rotated</div>
+                <div class="transform-scale">Scaled</div>
+                <div class="transform-translate">Translated</div>
+                <div class="transform-skew">Skewed</div>
+            </div>
+        </div>
+        
+        <!-- Animations -->
+        <div class="section">
+            <h2 class="section-title">Animations & Transitions</h2>
+            
+            <div class="example">
+                <h3>CSS Animations</h3>
+                <div class="code">
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in { animation: fadeIn 2s ease-in-out; }
+                </div>
+                <div class="fade-in" style="background: lightblue; padding: 10px; margin: 10px 0;">Fade In Animation</div>
+                <div class="slide-in" style="background: lightgreen; padding: 10px; margin: 10px 0;">Slide In Animation</div>
+                <div class="bounce" style="background: lightcoral; padding: 10px; margin: 10px 0; display: inline-block;">Bouncing Animation</div>
+            </div>
+            
+            <div class="example">
+                <h3>CSS Transitions</h3>
+                <div class="code">
+.transition-all {
+    transition: all 0.3s ease;
+}
+.transition-all:hover {
+    background: darkblue;
+    color: white;
+    transform: scale(1.1);
+}
+                </div>
+                <div class="transition-all">Hover for Transition Effect</div>
+            </div>
+        </div>
+        
+        <!-- Overflow -->
+        <div class="section">
+            <h2 class="section-title">Overflow & Clipping</h2>
+            
+            <div class="example">
+                <h3>Overflow Properties</h3>
+                <div class="code">
+.overflow-hidden { overflow: hidden; }
+.overflow-scroll { overflow: scroll; }
+                </div>
+                <div class="overflow-hidden">This text is longer than the container and will be clipped because overflow is set to hidden.</div>
+                <div class="overflow-scroll">This text is longer than the container but you can scroll to see all of it because overflow is set to scroll. Keep reading to see more content that extends beyond the visible area.</div>
+            </div>
+        </div>
+        
+        <!-- Lists -->
+        <div class="section">
+            <h2 class="section-title">Lists</h2>
+            
+            <div class="example">
+                <h3>List Styles</h3>
+                <div class="code">
+.list-none { list-style: none; }
+.list-disc { list-style-type: disc; }
+.list-decimal { list-style-type: decimal; }
+.list-square { list-style-type: square; }
+                </div>
+                <ul class="list-none">
+                    <li>No bullets</li>
+                    <li>Clean list</li>
+                </ul>
+                <ul class="list-disc">
+                    <li>Disc bullets</li>
+                    <li>Default style</li>
+                </ul>
+                <ol class="list-decimal">
+                    <li>Numbered list</li>
+                    <li>Sequential items</li>
+                </ol>
+                <ul class="list-square">
+                    <li>Square bullets</li>
+                    <li>Alternative style</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Tables -->
+        <div class="section">
+            <h2 class="section-title">Tables</h2>
+            
+            <div class="example">
+                <h3>Table Properties</h3>
+                <div class="code">
+.example-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.example-table th, .example-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+                </div>
+                <table class="example-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John</td>
+                            <td>30</td>
+                            <td>New York</td>
+                        </tr>
+                        <tr>
+                            <td>Jane</td>
+                            <td>25</td>
+                            <td>London</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Cursor -->
+        <div class="section">
+            <h2 class="section-title">Cursor & UI</h2>
+            
+            <div class="example">
+                <h3>Cursor Types</h3>
+                <div class="code">
+.cursor-pointer { cursor: pointer; }
+.cursor-help { cursor: help; }
+.cursor-wait { cursor: wait; }
+.cursor-not-allowed { cursor: not-allowed; }
+                </div>
+                <div class="cursor-pointer">Pointer Cursor</div>
+                <div class="cursor-help">Help Cursor</div>
+                <div class="cursor-wait">Wait Cursor</div>
+                <div class="cursor-not-allowed">Not Allowed Cursor</div>
+            </div>
+        </div>
+        
+        <!-- Pseudo-elements -->
+        <div class="section">
+            <h2 class="section-title">Pseudo-elements</h2>
+            
+            <div class="example">
+                <h3>Before & After</h3>
+                <div class="code">
+.pseudo-before::before {
+    content: "→ ";
+    color: red;
+}
+.pseudo-after::after {
+    content: " ←";
+    color: blue;
+}
+                </div>
+                <div class="pseudo-before">Text with before pseudo-element</div>
+                <div class="pseudo-after">Text with after pseudo-element</div>
+            </div>
+        </div>
+        
+        <!-- Responsive -->
+        <div class="section">
+            <h2 class="section-title">Responsive Design</h2>
+            
+            <div class="example">
+                <h3>Media Queries</h3>
+                <div class="code">
+@media (max-width: 768px) {
+    .responsive-text { font-size: 14px; color: red; }
+}
+@media (min-width: 769px) {
+    .responsive-text { font-size: 18px; color: blue; }
+}
+                </div>
+                <div class="responsive-text">Resize window to see color/size change</div>
+            </div>
+        </div>
+        
+        <!-- CSS Variables -->
+        <div class="section">
+            <h2 class="section-title">CSS Variables</h2>
+            
+            <div class="example">
+                <h3>Custom Properties</h3>
+                <div class="code">
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --spacing: 20px;
+}
+.css-variables {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    padding: var(--spacing);
+}
+                </div>
+                <div class="css-variables">Using CSS Variables</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Fixed position example (will appear at top right) -->
+    <div class="position-fixed" style="display: none;">Fixed Position</div>
+    
+    <script>
+        // Show fixed element briefly for demonstration
+        setTimeout(() => {
+            document.querySelector('.position-fixed').style.display = 'block';
+            setTimeout(() => {
+                document.querySelector('.position-fixed').style.display = 'none';
+            }, 3000);
+        }, 1000);
+    </script>
+</body>
+</html>
