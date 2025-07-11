@@ -1,0 +1,20 @@
+
+i want to build Attendance application for my class using nodejs and use files json as my database
+
+on the top of the screen i should see a sample section name , branch , year 
+below that i want table which has roll number , Name, a radio button ( if i select it means present , else no )
+
+lastly i want a submit button 
+
+features :
+	teacher should be able to check those checkboxes and click on submit 
+	immediately there should be csv downloaded which should have today's date header should have rollnumber, name,present (1) , absent (0)
+
+after all rows it should have a last row as number of absentees 
+
+i should be in a position to manage students
+
+
+build the best frontend using html,css,js and use nodejs in the server side and am using thunder to test these apis give me request jsons for testing all apis needed ( best ui possible )
+
+my frontend can you please help me to have  a table where i can mark attendance and click on submit to download csv from browser and above this table i need a feature for managing students please rewrite your frontend

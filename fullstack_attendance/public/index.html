@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Attendance</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+    th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+    th { background-color: #f2f2f2; }
+    input[type="text"] { padding: 5px; margin: 5px; }
+    button { padding: 6px 12px; margin: 5px; }
+    .section { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Attendance Management System</h2>
+
+  <!-- Section Info -->
+  <div class="section">
+    <input type="text" id="section" placeholder="Section (e.g., A)">
+    <input type="text" id="branch" placeholder="Branch (e.g., CSE)">
+    <input type="text" id="year" placeholder="Year (e.g., 3)">
+  </div>
+
+  <!-- Manage Students -->
+  <div class="section">
+    <input type="text" id="newRoll" placeholder="Roll Number">
+    <input type="text" id="newName" placeholder="Name">
+    <button onclick="addStudent()">Add Student</button>
+
+    <input type="text" id="deleteRoll" placeholder="Roll Number to Delete">
+    <button onclick="deleteStudent()">Delete Student</button>
+  </div>
+
+  <!-- Attendance Table -->
+  <div id="attendanceForm"></div>
+
+  <!-- Submit Button -->
+  <button onclick="submitAttendance()">Submit Attendance</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
